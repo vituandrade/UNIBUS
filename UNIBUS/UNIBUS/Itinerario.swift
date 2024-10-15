@@ -13,6 +13,7 @@ struct ContentView: View {
                     Text("Itinerários")
                         .foregroundStyle(.white)
                         .font(.largeTitle)
+                        .bold()
                     ForEach(viewModel.chars, id: \.self) { i in
                         HStack{
                             ZStack{
@@ -58,7 +59,7 @@ struct sheetview: View {
                     .bold()
                     .padding()
                     .foregroundStyle(.white)
-                if nomizinho == "Ônibus L"{
+                if (nomizinho == "Ônibus L"){
                     VStack{
                         HStack{
                             ZStack{
@@ -249,7 +250,7 @@ struct sheetview: View {
                         .frame(height: 1)
                         .foregroundStyle(.white)
                 }else{
-                    if nomizinho == "Ônibus L"{
+                    if nomizinho == "Ônibus F"{
                         VStack{
                             HStack{
                                 ZStack{
@@ -414,9 +415,11 @@ struct sheetview: View {
                     }
                 }
             }
-        }
+        }.background(.cor)
     }
+    
 }
+
 
 
 #Preview {
